@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if(phone.getText().toString().replace("(", "").replace(")", "").replace("-", "").isEmpty() || phone.getText().toString().isEmpty()) {
+        if(phone.getText().toString().replace("(", "").replace(")", "").replace("-", "").trim().isEmpty()) {
             Toast.makeText(this, "Por favor, digite um telefone para envio do sms!", Toast.LENGTH_SHORT).show();
             return;
         }
