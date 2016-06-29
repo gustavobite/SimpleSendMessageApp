@@ -16,7 +16,7 @@
         android:hint="Digite sua mensagem"
         android:layout_margin="12dp"/>
 
-    <EditText
+    <com.appsimple.simplesendmessageapp.PhoneEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"

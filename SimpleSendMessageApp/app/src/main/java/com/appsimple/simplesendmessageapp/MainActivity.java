@@ -63,6 +63,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendSms(){
+
+        if(message.getText().toString() == null  || message.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Por favor, digite uma mensagem para envio do sms!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(phone.getText().toString().replace("(", "").replace(")", "").replace("-", "").isEmpty() || phone.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Por favor, digite um telefone para envio do sms!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phone.getText().toString(), null, message.getText().toString(), null, null);
         Toast.makeText(this, "Mensagem enviada com sucesso!", Toast.LENGTH_LONG).show();
